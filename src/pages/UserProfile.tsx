@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Heart, TrendingUp, FileText, Linkedin, Github } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const UserProfile = () => {
   return (
@@ -22,7 +23,7 @@ const UserProfile = () => {
           {/* Profile Picture */}
           <div className="flex justify-center mb-8">
             <Avatar className="w-32 h-32 border-4 border-zluri-lime shadow-lg">
-              <AvatarImage src="/profile.png" alt="Profile" />
+              <AvatarImage src={getAssetPath("/profile.png")} alt="Profile" />
               <AvatarFallback className="text-4xl font-bold bg-gradient-hero text-white">
                 ZU
               </AvatarFallback>
