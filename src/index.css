@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Zluri Employee App Catalog Design System
+Based on Zluri Brand Guidelines v2 - All colors in HSL format
+Primary: Red, Lime, Cyan | Secondary: 40% tints | Neutrals: Grays
+Typography: Sora (headlines) + Lexend (body) */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Brand Colors - Zluri Primary Palette */
+    --zluri-red: 0 66% 67%;           /* #FF5757 */
+    --zluri-lime: 76 100% 67%;        /* #D3FF57 */
+    --zluri-cyan: 195 100% 67%;       /* #57E1FF */
+    
+    /* Brand Colors - Secondary Tints (~40% opacity) */
+    --zluri-red-light: 0 66% 87%;     /* #FFBCBC */
+    --zluri-lime-light: 76 100% 87%;  /* #EDFFBC */
+    --zluri-cyan-light: 195 100% 87%; /* #BCF3FF */
+    
+    /* Brand Neutrals */
+    --zluri-black: 0 0% 13%;          /* #222222 */
+    --zluri-dark-gray: 0 0% 33%;      /* #555555 */
+    --zluri-mid-gray: 0 0% 52%;       /* #848484 */
+    --zluri-off-white: 0 0% 98%;      /* #F9F9F9 */
+    --zluri-white: 0 0% 100%;         /* #FFFFFF */
+    
+    /* System Colors (Semantic Tokens) */
+    --background: var(--zluri-white);
+    --foreground: var(--zluri-black);
+    
+    --card: var(--zluri-white);
+    --card-foreground: var(--zluri-black);
+    
+    --popover: var(--zluri-white);
+    --popover-foreground: var(--zluri-black);
+    
+    --primary: var(--zluri-red);
+    --primary-foreground: var(--zluri-white);
+    
+    --secondary: var(--zluri-off-white);
+    --secondary-foreground: var(--zluri-black);
+    
+    --muted: var(--zluri-off-white);
+    --muted-foreground: var(--zluri-mid-gray);
+    
+    --accent: var(--zluri-lime-light);
+    --accent-foreground: var(--zluri-black);
+    
+    --destructive: var(--zluri-red);
+    --destructive-foreground: var(--zluri-white);
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--zluri-red);
+    
+    /* Custom Design Tokens */
+    --success: var(--zluri-lime);
+    --success-foreground: var(--zluri-black);
+    --info: var(--zluri-cyan);
+    --info-foreground: var(--zluri-black);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--zluri-red)), hsl(var(--zluri-lime)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--zluri-off-white)), hsl(var(--zluri-white)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--zluri-red-light)), hsl(var(--zluri-cyan-light)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--zluri-red) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--zluri-black) / 0.08);
+    --shadow-strong: 0 16px 40px hsl(var(--zluri-black) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--zluri-black);
+    --foreground: var(--zluri-white);
+    
+    --card: var(--zluri-dark-gray);
+    --card-foreground: var(--zluri-white);
+    
+    --popover: var(--zluri-dark-gray);
+    --popover-foreground: var(--zluri-white);
+    
+    --primary: var(--zluri-red);
+    --primary-foreground: var(--zluri-white);
+    
+    --secondary: var(--zluri-dark-gray);
+    --secondary-foreground: var(--zluri-white);
+    
+    --muted: var(--zluri-dark-gray);
+    --muted-foreground: var(--zluri-mid-gray);
+    
+    --accent: var(--zluri-lime-light);
+    --accent-foreground: var(--zluri-black);
+    
+    --destructive: var(--zluri-red);
+    --destructive-foreground: var(--zluri-white);
+    
+    --border: var(--zluri-mid-gray);
+    --input: var(--zluri-dark-gray);
+    --ring: var(--zluri-red);
+    
+    --sidebar-background: var(--zluri-black);
+    --sidebar-foreground: var(--zluri-white);
+    --sidebar-primary: var(--zluri-red);
+    --sidebar-primary-foreground: var(--zluri-white);
+    --sidebar-accent: var(--zluri-dark-gray);
+    --sidebar-accent-foreground: var(--zluri-white);
+    --sidebar-border: var(--zluri-mid-gray);
+    --sidebar-ring: var(--zluri-red);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Sora', system-ui, sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Lexend', system-ui, sans-serif;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
