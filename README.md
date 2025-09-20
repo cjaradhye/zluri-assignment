@@ -1,8 +1,14 @@
 # Zluri Employee App Catalog
 
+**Made by Aradhye**
+
 ## Project Overview
 
 A modern, intuitive employee app catalog built to showcase Zluri's design principles and SaaS management capabilities. This demo application allows employees to discover, explore, and request access to approved business applications.
+
+## Live Demo
+
+🚀 **Live Site**: [https://cjaradhye.github.io/zluri-assignment/](https://cjaradhye.github.io/zluri-assignment/)
 
 ## Features
 
@@ -21,10 +27,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/cjaradhye/zluri-assignment.git
 
 # Step 2: Navigate to the project directory
-cd zluri-catalog-nexus
+cd zluri-assignment
 
 # Step 3: Install dependencies
 npm i
@@ -65,14 +71,20 @@ This project showcases modern web development practices with:
 
 ## Deployment
 
-The application can be deployed to any static hosting platform such as:
+🌐 **Current Deployment**: This application is automatically deployed to GitHub Pages via GitHub Actions.
+
+**Live URL**: [https://cjaradhye.github.io/zluri-assignment/](https://cjaradhye.github.io/zluri-assignment/)
+
+The application can also be deployed to other static hosting platforms such as:
 - Vercel
 - Netlify
 - AWS S3 + CloudFront
-- GitHub Pages
 
 Build the project using:
 ```sh
 npm run build
 ```
-# zluri-assignment
+
+---
+
+**Created by Aradhye** | [GitHub Repository](https://github.com/cjaradhye/zluri-assignment)
