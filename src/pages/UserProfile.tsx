@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Heart, TrendingUp } from "lucide-react";
+import { Heart, TrendingUp, FileText, Linkedin, Github } from "lucide-react";
 
 const UserProfile = () => {
   return (
@@ -20,13 +20,46 @@ const UserProfile = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Profile Picture */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-8">
             <Avatar className="w-32 h-32 border-4 border-zluri-lime shadow-lg">
               <AvatarImage src="/profile.png" alt="Profile" />
               <AvatarFallback className="text-4xl font-bold bg-gradient-hero text-white">
                 ZU
               </AvatarFallback>
             </Avatar>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center gap-6 mb-12">
+            <a
+              href="https://cjaradhye.github.io/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-zluri-red to-red-400 rounded-full transition-smooth hover:shadow-medium hover:shadow-soft hover:-translate-y-1"
+              title="Resume"
+            >
+              <FileText className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+            </a>
+            
+            <a
+              href="https://linkedin.com/in/aradhyeswarup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full transition-smooth hover:shadow-medium hover:shadow-soft hover:-translate-y-1"
+              title="LinkedIn"
+            >
+              <Linkedin className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+            </a>
+            
+            <a
+              href="https://github.com/cjaradhye"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full transition-smooth hover:shadow-medium hover:shadow-soft hover:-translate-y-1"
+              title="GitHub"
+            >
+              <Github className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+            </a>
           </div>
 
           {/* Cards Section */}
