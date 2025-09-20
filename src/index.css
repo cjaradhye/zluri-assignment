@@ -1,13 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Zluri Employee App Catalog Design System
 Based on Zluri Brand Guidelines v2 - All colors in HSL format
 Primary: Red, Lime, Cyan | Secondary: 40% tints | Neutrals: Grays
 Typography: Sora (headlines) + Lexend (body) */
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
